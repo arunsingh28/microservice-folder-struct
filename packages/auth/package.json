@@ -1,0 +1,25 @@
+{
+  "name": "@ai-interview/auth",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@ai-interview/shared": "workspace:*",
+    "keycloak-admin": "^1.14.22",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-client": "^2.0.5",
+    "fastify": "^4.25.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/jsonwebtoken": "^9.0.5"
+  }
+}

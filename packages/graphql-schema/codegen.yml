@@ -1,0 +1,16 @@
+overwrite: true
+schema: "./src/typedefs/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      useIndexSignature: true
+      contextType: "../types/context#GraphQLContext"
+      mappers:
+        User: "@ai-interview/database#User"
+        Company: "@ai-interview/database#Company"
+        Job: "@ai-interview/database#Job"
+        Candidate: "@ai-interview/database#Candidate"
+        Interview: "@ai-interview/database#Interview"

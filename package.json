@@ -1,0 +1,39 @@
+{
+  "name": "ai-interview-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@8.15.0",
+  "author": {
+    "name": "Arun Singh",
+    "email": "arunps@griphic.com"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check",
+    "clean": "pnpm -r clean",
+    "db:generate": "pnpm --filter database db:generate",
+    "db:migrate": "pnpm --filter database db:migrate",
+    "db:seed": "pnpm --filter database db:seed",
+    "gql:generate": "pnpm --filter graphql-schema generate",
+    "start": "pnpm --filter api-server start"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.13",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}

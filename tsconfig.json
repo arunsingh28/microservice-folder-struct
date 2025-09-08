@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "allowJs": true,
+    "checkJs": false,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/database/*": ["./packages/database/src/*"],
+      "@/shared/*": ["./packages/shared/src/*"],
+      "@/auth/*": ["./packages/auth/src/*"],
+      "@/logger/*": ["./packages/logger/src/*"],
+      "@/graphql-schema/*": ["./packages/graphql-schema/src/*"]
+    },
+    "types": ["node"]
+  },
+  "include": [
+    "apps/**/*",
+    "packages/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    { "path": "./packages/database" },
+    { "path": "./packages/shared" },
+    { "path": "./packages/auth" },
+    { "path": "./packages/logger" },
+    { "path": "./packages/graphql-schema" },
+    { "path": "./apps/api-server" }
+  ]
+}

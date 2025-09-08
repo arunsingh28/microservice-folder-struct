@@ -1,0 +1,7 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+shamefully-hoist: true
+strict-peer-dependencies: true
+auto-install-peers: true
